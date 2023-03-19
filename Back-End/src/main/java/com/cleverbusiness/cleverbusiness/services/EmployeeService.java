@@ -1,6 +1,8 @@
 
 package com.cleverbusiness.cleverbusiness.services;
 
+import com.cleverbusiness.cleverbusiness.models.Employee;
+import com.cleverbusiness.cleverbusiness.repositories.EmployeeRepository;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

@@ -1,5 +1,6 @@
 package com.cleverbusiness.cleverbusiness.services;
 
+import com.cleverbusiness.cleverbusiness.repositories.RegistrationRepository;
 import jakarta.servlet.Registration;
 import java.util.Date;
 import java.util.List;
