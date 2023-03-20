@@ -22,7 +22,7 @@ public class RegistrationService {
     }
 
     public Registration upDateRegistration(Registration upDateRegistration){
-        Registration registration = registrationRepository.findById(upDateRegistration.getIdRegistration()).orElse(null);;
+        Registration registration = registrationRepository.findById(upDateRegistration.getRegistration_Id()).orElse(null);;
         if (registration ==  null){
             return null;
         }

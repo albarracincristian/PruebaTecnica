@@ -9,7 +9,7 @@ public class Registration {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(unique=true, nullable = false)
-    private Long idRegistration;
+    private Long Registration_Id;
 
     @ManyToOne
     @JoinColumn(name = "employee_id",nullable = false)
@@ -19,8 +19,8 @@ public class Registration {
     private String registerType;
     private String businessLocation;
 
-    public Registration(Long idRegistration, Employee employee, Date date, String registerType, String businessLocation){
-        this.idRegistration=idRegistration;
+    public Registration(Long Registration_Id, Employee employee, Date date, String registerType, String businessLocation){
+        this.Registration_Id=Registration_Id;
         this.employee=employee;
         this.date=date;
         this.registerType=registerType;
@@ -31,12 +31,12 @@ public class Registration {
 
     }
 
-    public Long getIdRegistration() {
-        return idRegistration;
+    public Long getRegistration_Id() {
+        return Registration_Id;
     }
 
-    public void setIdRegistration(Long idRegistration) {
-        this.idRegistration = idRegistration;
+    public void setRegistration_Id(Long Registration_Id) {
+        this.Registration_Id = Registration_Id;
     }
 
     public Employee getEmployee() {
