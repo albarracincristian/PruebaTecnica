@@ -9,18 +9,18 @@ public class Employee {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(unique=true, nullable = false)
-    private Long idEmployee;
+    private Long Employee_Id;
 
     @JsonProperty("first_name")
-    private String firstName;
+    private String first_name;
     @JsonProperty("last_name")
-    private String lastName;
+    private String last_name;
     private String gender;
 
-    public Employee(Long idEmployee, String firstName, String lastName, String gender){
-        this.idEmployee=idEmployee;
-        this.firstName=firstName;
-        this.lastName=lastName;
+    public Employee(Long Employee_Id, String first_name, String last_name, String gender){
+        this.Employee_Id=Employee_Id;
+        this.first_name=first_name;
+        this.last_name=last_name;
         this.gender=gender;
     }
 
@@ -28,28 +28,28 @@ public class Employee {
 
     }
 
-    public Long getIdEmployee (){
-        return idEmployee;
+    public Long getEmployee_Id (){
+        return Employee_Id;
     }
 
-    public void setIdEmployee(Long idEmployee){
-        this.idEmployee=idEmployee;
+    public void setEmployee_Id (Long Employee_Id){
+        this.Employee_Id=Employee_Id;
     }
 
-    public String getFirstName(){
-        return firstName;
+    public String getfirst_name(){
+        return first_name;
     }
 
-    public void setFirstName(String firstName){
-        this.firstName=firstName;
+    public void setfirst_name(String first_name){
+        this.first_name=first_name;
     }
 
-    public String getLastName(){
-        return lastName;
+    public String getlast_name(){
+        return last_name;
     }
 
-    public void setLastName(String lastName){
-        this.lastName=lastName;
+    public void setlast_name(String last_name){
+        this.last_name=last_name;
     }
 
     public String getGender(){

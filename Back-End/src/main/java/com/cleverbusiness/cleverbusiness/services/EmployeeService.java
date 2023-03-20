@@ -16,8 +16,8 @@ public class EmployeeService {
         return employeeRepository.findAll();
     }
 
-    public Employee getEmployee(Long idEmployee) {
-        return employeeRepository.findById(idEmployee).orElse(null);
+    public Employee getEmployee(Long Employee_Id) {
+        return employeeRepository.findById(Employee_Id).orElse(null);
     }
 
     public Employee saveEmployee(Employee employee) {
@@ -25,12 +25,12 @@ public class EmployeeService {
     }
 
     public Employee upDateEmployee(Employee upDateEmployee){
-        Employee employee = employeeRepository.findById(upDateEmployee.getIdEmployee()).orElse(null);
+        Employee employee = employeeRepository.findById(upDateEmployee.getEmployee_Id()).orElse(null);
         if (employee ==  null){
             return null;
         }
-        employee.setFirstName(upDateEmployee.getFirstName());
-        employee.setLastName(upDateEmployee.getLastName());
+        employee.setfirst_name(upDateEmployee.getfirst_name());
+        employee.setlast_name(upDateEmployee.getlast_name());
         employee.setGender(upDateEmployee.getGender());
         return employeeRepository.save(employee);
     }

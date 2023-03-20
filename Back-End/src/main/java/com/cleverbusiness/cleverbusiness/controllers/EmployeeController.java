@@ -22,8 +22,8 @@ public class EmployeeController {
 
     @GetMapping( "/employees/getEmployee")
     @ResponseStatus(HttpStatus.OK)
-    public ResponseEntity<Employee> getEmployee(@RequestBody Long idEmployee) {
-        return ResponseEntity.status(HttpStatus.OK).body(employeeService.getEmployee(idEmployee));
+    public ResponseEntity<Employee> getEmployee(@RequestBody Long Employee_Id) {
+        return ResponseEntity.status(HttpStatus.OK).body(employeeService.getEmployee(Employee_Id));
     }
 
     @PostMapping("/employees/save")
