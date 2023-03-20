@@ -1,15 +1,15 @@
 package com.cleverbusiness.cleverbusiness.repositories;
 
-import jakarta.servlet.Registration;
-import java.util.Date;
-import java.util.List;
+import com.cleverbusiness.cleverbusiness.models.Registration;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
+import java.util.Date;
+import java.util.List;
 
 public interface RegistrationRepository extends JpaRepository<Registration,Long> {
-     @Query(value = "SELECT Employee.first_name, " +
+    @Query(value = "SELECT Employee.first_name, " +
             "sum(CASE WHEN register_type = 'ingreso' THEN 1 ELSE 0 END) AS conteo_ingreso, " +
             "sum(CASE WHEN register_type = 'egreso' THEN 1 ELSE 0 END) AS conteo_egreso " +
             "FROM Registration WHERE Registration.date >=: dateFrom AND Registration.date<=: dateTo AND AND Registration.business_location=: businessLocation" +

@@ -1,11 +1,11 @@
-
 package com.cleverbusiness.cleverbusiness.services;
 
 import com.cleverbusiness.cleverbusiness.models.Employee;
 import com.cleverbusiness.cleverbusiness.repositories.EmployeeRepository;
-import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 @Service
 public class EmployeeService {
@@ -25,7 +25,7 @@ public class EmployeeService {
     }
 
     public Employee upDateEmployee(Employee upDateEmployee){
-        Employee employee = employeeRepository.findById(upDateEmployee.getIdEmployee()).orElse(null);;
+        Employee employee = employeeRepository.findById(upDateEmployee.getIdEmployee()).orElse(null);
         if (employee ==  null){
             return null;
         }

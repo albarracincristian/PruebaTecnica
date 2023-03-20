@@ -1,38 +1,30 @@
 package com.cleverbusiness.cleverbusiness.models;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
+import jakarta.persistence.*;
 import java.util.Date;
 
-
 @Entity
-
+@Table(name="Registration")
 public class Registration {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(unique = true, nullable = false)
+    @Column(unique=true, nullable = false)
     private Long idRegistration;
 
     @ManyToOne
-    @JoinColumn(name = "employee_id", nullable = false)
+    @JoinColumn(name = "employee_id",nullable = false)
     private Employee employee;
 
     private Date date;
     private String registerType;
     private String businessLocation;
 
-    public Registration(Long idRegistration, Employee employee, Date date, String registerType, String businessLocation) {
-        this.idRegistration = idRegistration;
-        this.employee = employee;
-        this.date = date;
-        this.registerType = registerType;
-        this.businessLocation = businessLocation;
+    public Registration(Long idRegistration, Employee employee, Date date, String registerType, String businessLocation){
+        this.idRegistration=idRegistration;
+        this.employee=employee;
+        this.date=date;
+        this.registerType=registerType;
+        this.businessLocation=businessLocation;
     }
 
     public Registration() {
