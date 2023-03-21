@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Date;
+import org.springframework.format.annotation.DateTimeFormat;
 
 @RestController
 public class RegistrationController {
@@ -39,11 +40,17 @@ public class RegistrationController {
         return ResponseEntity.status(HttpStatus.CREATED).body(registrationService.register(registration));
     }
 
-    @GetMapping( "/registrations/search")
-    @ResponseStatus(HttpStatus.OK)
-    public ResponseEntity<List> search(@RequestBody Date dateFrom, Date dateTo, String descriptionFilter, String businessLocation) {
-        return ResponseEntity.status(HttpStatus.CREATED).body(registrationService.search(dateFrom,dateTo,descriptionFilter,businessLocation));
-    }
+@GetMapping("/registrations/search")
+@ResponseStatus(HttpStatus.OK)
+public ResponseEntity<List<Object>> search(
+    @RequestParam("dateFrom") @DateTimeFormat(pattern = "yyyy-MM-dd") Date dateFrom,
+    @RequestParam("dateTo") @DateTimeFormat(pattern = "yyyy-MM-dd") Date dateTo,
+    @RequestParam("descriptionFilter") String descriptionFilter,
+    @RequestParam("businessLocation") String businessLocation) {
+    
+    List<Object> results = registrationService.search(dateFrom, dateTo, descriptionFilter, businessLocation);
+    return ResponseEntity.ok(results);
+}
 
     @GetMapping(value = "/registrations/average")
     @ResponseStatus(HttpStatus.OK)
