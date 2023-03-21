@@ -57,9 +57,10 @@ public class RegistrationController {
     }
 
     // Obtener el promedio de registros por fecha
-    @GetMapping(value = "/registrations/average")
+   @GetMapping(value = "/registrations/average")
     @ResponseStatus(HttpStatus.OK)
-    public ResponseEntity<List> average(@RequestParam Date dateFrom, @RequestParam Date dateTo) {
-        return ResponseEntity.status(HttpStatus.CREATED).body(registrationService.average(dateFrom, dateTo));
+    public ResponseEntity<List> average(@RequestParam("dateFrom") @DateTimeFormat(pattern = "yyyy-MM-dd") Date dateFrom,
+                                        @RequestParam("dateTo") @DateTimeFormat(pattern = "yyyy-MM-dd") Date dateTo) {
+        return ResponseEntity.status(HttpStatus.OK).body(registrationService.average(dateFrom, dateTo));
     }
 }
