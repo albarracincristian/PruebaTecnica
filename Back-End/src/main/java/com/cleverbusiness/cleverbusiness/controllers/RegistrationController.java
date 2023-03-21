@@ -21,9 +21,9 @@ public class RegistrationController {
         return ResponseEntity.status(HttpStatus.OK).body(registrationService.getAll());
     }
 
-    @GetMapping("/registrations/getRegistration")
+    @GetMapping("/registrations/{idRegistration}")
     @ResponseStatus(HttpStatus.OK)
-    public ResponseEntity<Registration> getRegistration(@RequestBody Long idRegistration) {
+    public ResponseEntity<Registration> getRegistration(@PathVariable Long idRegistration) {
         return ResponseEntity.status(HttpStatus.OK).body(registrationService.getRegistration(idRegistration));
     }
 
