@@ -9,7 +9,8 @@ import java.util.Date;
 import java.util.List;
 
 public interface RegistrationRepository extends JpaRepository<Registration, Long> {
-
+    
+    // Consulta para buscar registros por fecha, descripción y ubicación del negocio
     @Query(value = "SELECT Employee.first_name, Employee.last_name, " +
             "sum(CASE WHEN register_type = 'ingreso' THEN 1 ELSE 0 END) AS conteo_ingreso, " +
             "sum(CASE WHEN register_type = 'egreso' THEN 1 ELSE 0 END) AS conteo_egreso " +
@@ -22,7 +23,8 @@ public interface RegistrationRepository extends JpaRepository<Registration, Long
                                                    @Param("dateTo") Date dateTo,
                                                    @Param("descriptionFilter") String descriptionFilter,
                                                    @Param("businessLocation") String businessLocation);
-
+    
+    // Consulta para buscar registros por fecha y ubicación del negocio
     @Query(value = "SELECT Employee.first_name, Employee.last_name, " +
             "sum(CASE WHEN register_type = 'ingreso' THEN 1 ELSE 0 END) AS conteo_ingreso, " +
             "sum(CASE WHEN register_type = 'egreso' THEN 1 ELSE 0 END) AS conteo_egreso " +
