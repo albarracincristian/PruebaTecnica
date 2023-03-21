@@ -55,7 +55,7 @@ INSERT INTO Registration VALUES (25,9,'2023-5-16','ingreso','España');
 INSERT INTO Registration VALUES (27,9,'2023-5-17','egreso','España');
 INSERT INTO Registration VALUES (28,10,'2023-5-17','ingreso','España');
 INSERT INTO Registration VALUES (29,10,'2023-5-17','egreso','España');
-INSERT INTO Registration VALUES (30,10,'202-5-18','ingreso','España');
+INSERT INTO Registration VALUES (30,10,'2023-5-18','ingreso','España');
 
 
 
