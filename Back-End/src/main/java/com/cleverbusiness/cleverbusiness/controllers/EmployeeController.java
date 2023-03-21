@@ -20,11 +20,12 @@ public class EmployeeController {
         return ResponseEntity.status(HttpStatus.OK).body(employeeService.getAll());
     }
 
-    @GetMapping( "/employees/getEmployee")
+    @GetMapping("/employees/{employeeId}")
     @ResponseStatus(HttpStatus.OK)
-    public ResponseEntity<Employee> getEmployee(@RequestBody Long Employee_Id) {
-        return ResponseEntity.status(HttpStatus.OK).body(employeeService.getEmployee(Employee_Id));
+    public ResponseEntity<Employee> getEmployee(@PathVariable Long employeeId) {
+        return ResponseEntity.status(HttpStatus.OK).body(employeeService.getEmployee(employeeId));
     }
+
 
     @PostMapping("/employees/save")
     @ResponseStatus(HttpStatus.CREATED)
