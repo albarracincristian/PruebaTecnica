@@ -3,22 +3,23 @@ package com.cleverbusiness.cleverbusiness.models;
 import jakarta.persistence.*;
 import java.util.Date;
 
-@Entity
-@Table(name="Registration")
+@Entity // La clase es una entidad JPA
+@Table(name="Registration") // Se mapea a una tabla llamada "Registration"
 public class Registration {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(unique=true, nullable = false)
-    private Long Registration_Id;
+    @Id // Indica que el siguiente campo es la clave primaria de la entidad
+    @GeneratedValue(strategy = GenerationType.IDENTITY) // Indica que el valor de la clave primaria será generado automáticamente
+    @Column(unique=true, nullable = false) // Indica que el campo es único y no puede ser nulo
+    private Long Registration_Id; // El campo de la clave primaria
 
-    @ManyToOne
-    @JoinColumn(name = "employee_id",nullable = false)
-    private Employee employee;
+    @ManyToOne // Indica que se trata de una relación muchos-a-uno
+    @JoinColumn(name = "employee_id",nullable = false) // Indica que el campo de la clave foránea es "employee_id" y no puede ser nulo
+    private Employee employee; // El campo que referencia a la entidad "Employee"
 
-    private Date date;
-    private String registerType;
-    private String businessLocation;
+    private Date date; // El campo de fecha
+    private String registerType; // El campo de tipo de registro
+    private String businessLocation; // El campo de ubicación de la empresa
 
+    // Constructor que inicializa todos los campos
     public Registration(Long Registration_Id, Employee employee, Date date, String registerType, String businessLocation){
         this.Registration_Id=Registration_Id;
         this.employee=employee;
@@ -27,10 +28,12 @@ public class Registration {
         this.businessLocation=businessLocation;
     }
 
+    // Constructor vacío requerido por JPA
     public Registration() {
 
     }
 
+    // Métodos getter y setter para cada campo
     public Long getRegistration_Id() {
         return Registration_Id;
     }

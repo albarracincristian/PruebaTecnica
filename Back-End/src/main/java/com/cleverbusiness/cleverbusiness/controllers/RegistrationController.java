@@ -16,45 +16,50 @@ public class RegistrationController {
     @Autowired
     RegistrationService registrationService;
 
+    // Obtener todos los registros
     @GetMapping("/registrations/registersList")
     @ResponseStatus(HttpStatus.OK)
     public ResponseEntity<List> getAll() {
         return ResponseEntity.status(HttpStatus.OK).body(registrationService.getAll());
     }
 
+    // Obtener un registro específico por ID
     @GetMapping("/registrations/{idRegistration}")
     @ResponseStatus(HttpStatus.OK)
     public ResponseEntity<Registration> getRegistration(@PathVariable Long idRegistration) {
         return ResponseEntity.status(HttpStatus.OK).body(registrationService.getRegistration(idRegistration));
     }
 
+    // Actualizar un registro existente
     @PutMapping(value = "/registrations/upDateRegistration")
     @ResponseStatus(HttpStatus.UPGRADE_REQUIRED)
     public ResponseEntity<Registration> updDateRegistration(@RequestBody Registration registration) {
         return ResponseEntity.status(HttpStatus.UPGRADE_REQUIRED).body(registrationService.upDateRegistration(registration));
     }
 
+    // Registrar un nuevo registro
     @PostMapping("/registrations/register")
     @ResponseStatus(HttpStatus.CREATED)
     public ResponseEntity<Registration> register(@RequestBody Registration registration) {
         return ResponseEntity.status(HttpStatus.CREATED).body(registrationService.register(registration));
     }
 
-@GetMapping("/registrations/search")
-@ResponseStatus(HttpStatus.OK)
-public ResponseEntity<List<Object>> search(
-    @RequestParam("dateFrom") @DateTimeFormat(pattern = "yyyy-MM-dd") Date dateFrom,
-    @RequestParam("dateTo") @DateTimeFormat(pattern = "yyyy-MM-dd") Date dateTo,
-    @RequestParam("descriptionFilter") String descriptionFilter,
-    @RequestParam("businessLocation") String businessLocation) {
-    
-    List<Object> results = registrationService.search(dateFrom, dateTo, descriptionFilter, businessLocation);
-    return ResponseEntity.ok(results);
-}
+    // Buscar registros por fecha, filtro de descripción y ubicación del negocio
+    @GetMapping("/registrations/search")
+    @ResponseStatus(HttpStatus.OK)
+    public ResponseEntity<List<Object>> search(
+            @RequestParam("dateFrom") @DateTimeFormat(pattern = "yyyy-MM-dd") Date dateFrom,
+            @RequestParam("dateTo") @DateTimeFormat(pattern = "yyyy-MM-dd") Date dateTo,
+            @RequestParam("descriptionFilter") String descriptionFilter,
+            @RequestParam("businessLocation") String businessLocation) {
+        List<Object> results = registrationService.search(dateFrom, dateTo, descriptionFilter, businessLocation);
+        return ResponseEntity.ok(results);
+    }
 
+    // Obtener el promedio de registros por fecha
     @GetMapping(value = "/registrations/average")
     @ResponseStatus(HttpStatus.OK)
-    public ResponseEntity<List> average(@RequestBody Date dateFrom, Date dateTo) {
+    public ResponseEntity<List> average(@RequestParam Date dateFrom, @RequestParam Date dateTo) {
         return ResponseEntity.status(HttpStatus.CREATED).body(registrationService.average(dateFrom, dateTo));
     }
 }

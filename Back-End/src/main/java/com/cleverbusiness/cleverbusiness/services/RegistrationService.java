@@ -13,16 +13,19 @@ public class RegistrationService {
     @Autowired
     RegistrationRepository registrationRepository;
 
+    // Método que retorna una lista con todos los registros
     public List<Registration> getAll() {
         return registrationRepository.findAll();
     }
 
+    // Método que retorna un registro específico según el id
     public Registration getRegistration(Long idRegistration) {
         return registrationRepository.findById(idRegistration).orElse(null);
     }
 
+    // Método que actualiza un registro según el objeto pasado como parámetro
     public Registration upDateRegistration(Registration upDateRegistration){
-        Registration registration = registrationRepository.findById(upDateRegistration.getRegistration_Id()).orElse(null);;
+        Registration registration = registrationRepository.findById(upDateRegistration.getRegistration_Id()).orElse(null);
         if (registration ==  null){
             return null;
         }
@@ -33,10 +36,12 @@ public class RegistrationService {
         return registrationRepository.save(registration);
     }
 
+    // Método que registra un nuevo registro
     public Registration register(Registration registration){
         return registrationRepository.saveAndFlush(registration);
     }
 
+    // Método que realiza una búsqueda según un rango de fechas, un filtro de descripción y una ubicación de negocio
     public List<Object> search (Date dateFrom, Date dateTo, String descriptionFilter, String businessLocation){
         if(descriptionFilter.equals("nombre")){
             return registrationRepository.searchFirstName(businessLocation,dateFrom,dateTo);
@@ -46,6 +51,7 @@ public class RegistrationService {
         }
     }
 
+    // Método que retorna la lista de promedios de horas de trabajo en un rango de fechas
     public List<Object> average(Date dateFrom, Date dateTo){
         return registrationRepository.average(dateFrom,dateTo);
     }
