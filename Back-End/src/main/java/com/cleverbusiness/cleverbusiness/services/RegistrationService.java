@@ -42,17 +42,16 @@ public class RegistrationService {
     }
 
     // Método que realiza una búsqueda según un rango de fechas, un filtro de descripción y una ubicación de negocio
-    public List<Object> search (Date dateFrom, Date dateTo, String descriptionFilter, String businessLocation){
-        if(descriptionFilter.equals("nombre")){
-            return registrationRepository.searchFirstName(businessLocation,dateFrom,dateTo);
-        }
-        else{
-            return registrationRepository.searchLastName(businessLocation,dateFrom,dateTo);
+   public List<Object[]> search(Date dateFrom, Date dateTo, String descriptionFilter, String businessLocation) {
+        if (descriptionFilter == null || descriptionFilter.isEmpty()) {
+            return registrationRepository.searchByLocation(dateFrom, dateTo, businessLocation);
+        } else {
+            return registrationRepository.searchByDescriptionAndLocation(dateFrom, dateTo, descriptionFilter, businessLocation);
         }
     }
 
     // Método que retorna la lista de promedios de horas de trabajo en un rango de fechas
-    public List<Object> average(Date dateFrom, Date dateTo){
+    public List<Object[]> average(Date dateFrom, Date dateTo){
         return registrationRepository.average(dateFrom,dateTo);
     }
 }

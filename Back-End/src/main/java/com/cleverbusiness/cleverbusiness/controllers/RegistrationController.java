@@ -47,12 +47,12 @@ public class RegistrationController {
     // Buscar registros por fecha, filtro de descripción y ubicación del negocio
     @GetMapping("/registrations/search")
     @ResponseStatus(HttpStatus.OK)
-    public ResponseEntity<List<Object>> search(
+    public ResponseEntity<List<Object[]>> search(
             @RequestParam("dateFrom") @DateTimeFormat(pattern = "yyyy-MM-dd") Date dateFrom,
             @RequestParam("dateTo") @DateTimeFormat(pattern = "yyyy-MM-dd") Date dateTo,
             @RequestParam("descriptionFilter") String descriptionFilter,
             @RequestParam("businessLocation") String businessLocation) {
-        List<Object> results = registrationService.search(dateFrom, dateTo, descriptionFilter, businessLocation);
+        List<Object[]> results = registrationService.search(dateFrom, dateTo, descriptionFilter, businessLocation);
         return ResponseEntity.ok(results);
     }
 
