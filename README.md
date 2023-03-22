@@ -173,3 +173,13 @@ http://localhost:8080/registrations/upDateRegistration
 ```
 Resultado ejemplo:
 [![modificaregistro.png](https://i.postimg.cc/VNdMxxXB/modificaregistro.png)](https://postimg.cc/hJRfx3yf)
+
+Solicitud Tipo GET para obtener la cantidad de ingresos y egresos por fecha desde hasta con filtro sucursal nombre o apellido (pasar parametros como muestra la imagen):
+
+```
+http://localhost:8080/registrations/search?dateFrom=2023-01-01&dateTo=2023-12-31&descriptionFilter=&businessLocation=España
+```
+Resultado ejemplo:
+[![cantingegrfecha.png](https://i.postimg.cc/Gm3Syp1L/cantingegrfecha.png)](https://postimg.cc/HVK2GdxR)
+
+### Gracias por la oportunidad del desafio
