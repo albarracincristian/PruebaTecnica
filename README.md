@@ -98,3 +98,19 @@ http://localhost:8080/registrations/registersList
 ```
 Resultado ejemplo:
 [![listaderegistros.png](https://i.postimg.cc/MK8fpMJL/listaderegistros.png)](https://postimg.cc/6TYpHQ3V)
+
+Solicitud Tipo PUT para modificar un empleado pasando los parametros necesarios en Body, Raw, Json
+
+```
+http://localhost:8080/employees/upDateEmployee
+```
+```
+{
+    "gender": "Masculino",
+    "employee_Id": 11,
+    "first_name": "Cristian B.",
+    "last_name": "Albarracin"
+}
+```
+Resultado ejemplo:
+[![modificaempleado.png](https://i.postimg.cc/qBWShr1S/modificaempleado.png)](https://postimg.cc/Sj7D3BFf)
