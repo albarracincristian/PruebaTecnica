@@ -90,3 +90,11 @@ http://localhost:8080/employees/save
 ```
 Resultado ejemplo:
 [![grabarempleado.png](https://i.postimg.cc/Qx6Y3rRH/grabarempleado.png)](https://postimg.cc/7f2n3jPk)
+
+Solicitud Tipo GET para obtener lista de Registros:
+
+```
+http://localhost:8080/registrations/registersList
+```
+Resultado ejemplo:
+[![listaderegistros.png](https://i.postimg.cc/MK8fpMJL/listaderegistros.png)](https://postimg.cc/6TYpHQ3V)
