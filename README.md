@@ -56,11 +56,22 @@ spring.jpa.database-platform=org.hibernate.dialect.MySQLDialect
 
 [![iniciacionspringboot.png](https://i.postimg.cc/TY7JB3g4/iniciacionspringboot.png)](https://postimg.cc/KRTTMF9P)
 
-### Solicitudes en Postman para Test API 🔩
+### Solicitudes en Postman para Test EndPoint API🔩
 
-_Explica que verifican estas pruebas y por qué_
+_Con el Proyecto en ejecucion en nuestro IDE Apache Netbeans, abrimos Postman y vamos a generar las siguientes solicitudes Http para la prueba de los endpoint de la API_
+
+Solicitud Tipo GET para obtener lista de empleados:
 
 ```
-Da un ejemplo
+http://localhost:8080/employees/employeeList
 ```
+Resultado ejemplo:
+[![get-lista-empleados.png](https://i.postimg.cc/Y25TPkBk/get-lista-empleados.png)](https://postimg.cc/F1xPfMKn)
 
+Solicitud Tipo GET para consultar un empleado por ID (numero del final de la cadena es el id del empleado a consultar):
+
+```
+http://localhost:8080/employees/10
+```
+Resultado ejemplo:
+[![consulta-empleado-id.png](https://i.postimg.cc/QMKpvL3G/consulta-empleado-id.png)](https://postimg.cc/Y4kGms0b)
