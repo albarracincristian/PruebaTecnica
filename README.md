@@ -52,15 +52,9 @@ spring.datasource.username=root
 spring.datasource.password=beclever
 spring.jpa.database-platform=org.hibernate.dialect.MySQLDialect
 ```
+*Luego de lo anterior iniciar Springboot Run desde el Navigator y asegurarnos que haya compilado el proyecto con la leyenda : Tomcat started on port(s): 8080 (http) with context path ''
 
-_Y repite_
-
-```
-hasta finalizar
-```
-
-_Finaliza con un ejemplo de cómo obtener datos del sistema o como usarlos para una pequeña demo_
-
+[![iniciacionspringboot.png](https://i.postimg.cc/TY7JB3g4/iniciacionspringboot.png)](https://postimg.cc/KRTTMF9P)
 
 ### Solicitudes en Postman para Test API 🔩
 
