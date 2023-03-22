@@ -8,11 +8,17 @@ Para esto la empresa decide contratar tus servicios. Como encargado del desarrol
 _Que cosas necesitas para instalar el software y como instalarlas_
 
 *IDE Apache Netbeans version 17
+
 *JDK version 17
+
 *MySQL Server 8.0.32
+
 *MySQL Workbennch 8.0.32
+
 *Connector/J version 8.0.32
+
 *Postman
+
 *Visual Studio Code
 
 ## Comenzando 🚀
