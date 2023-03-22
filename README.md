@@ -114,3 +114,19 @@ http://localhost:8080/employees/upDateEmployee
 ```
 Resultado ejemplo:
 [![modificaempleado.png](https://i.postimg.cc/qBWShr1S/modificaempleado.png)](https://postimg.cc/Sj7D3BFf)
+
+Solicitud Tipo GET para consultar un registro por ID (numero del final de la cadena es el id del registro a consultar):
+
+```
+http://localhost:8080/registrations/30
+```
+Resultado ejemplo:
+[![consultaregid.png](https://i.postimg.cc/C5CGxbPF/consultaregid.png)](https://postimg.cc/ctHgDtGj)
+
+Solicitud Tipo GET para obtener el promedio de Registros por fecha (pasar parametros como muestra la imagen):
+
+```
+http://localhost:8080/registrations/average?dateFrom=2023-01-01&dateTo=2023-12-31
+```
+Resultado ejemplo:
+[![promregfecha.png](https://i.postimg.cc/JhqCZFsJ/promregfecha.png)](https://postimg.cc/nsCWt0Yc)
