@@ -5,8 +5,6 @@ Para esto la empresa decide contratar tus servicios. Como encargado del desarrol
 
 ### Pre-requisitos 📋
 
-_Que cosas necesitas para instalar el software_
-
 *IDE Apache Netbeans version 17
 
 *JDK version 17
@@ -23,8 +21,6 @@ _Que cosas necesitas para instalar el software_
 
 ## Comenzando 🚀
 
-_Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local para propósitos de desarrollo y pruebas._
-
 *Crear Base de Datos con los siguientes datos Hostname: localhost puerto: 3307 Contraseña: beclever
 
 Agregar un nuevo Schema con el nombre a gusto y setear como Default o ejecutar el Query "use [nombre Schema elegido].
@@ -33,21 +29,19 @@ Ejecutar [Script](https://github.com/albarracincristian/PruebaTecnica/blob/main/
 
 [![Create-DB.png](https://i.postimg.cc/2yvtcfL6/Create-DB.png)](https://postimg.cc/0KkZjFfR)
 
-
-
-*Crear proyecto con Spring Initializr 
+*El proyecto esta creado con Spring Initializr Projet: Maven, Language: java, Spring Boot 3.0.4 con packaging: War Java: version 17
 
 [![springinit.png](https://i.postimg.cc/yYrD74Dx/springinit.png)](https://postimg.cc/F73rx6gX)
 
-```
-Da un ejemplo
-```
 
 ### Instalación 🔧
 
 _Una serie de ejemplos paso a paso que te dice lo que debes ejecutar para tener un entorno de desarrollo ejecutandose_
 
-_Dí cómo será ese paso_
+*Clonar Repositorio y abrir el poyecto Maven con Apache NetBeans directorio "Back-End", al abrir esperar que se descarguen todos los complementos para el build
+
+[![Abrirmaven.png](https://i.postimg.cc/V6C6RD1R/Abrirmaven.png)](https://postimg.cc/gXGmcyxX)
+
 
 ```
 Da un ejemplo
@@ -61,9 +55,6 @@ hasta finalizar
 
 _Finaliza con un ejemplo de cómo obtener datos del sistema o como usarlos para una pequeña demo_
 
-## Ejecutando las pruebas ⚙️
-
-_Explica como ejecutar las pruebas automatizadas para este sistema_
 
 ### Analice las pruebas end-to-end 🔩
 
