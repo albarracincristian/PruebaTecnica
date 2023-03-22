@@ -8,7 +8,9 @@ Para esto la empresa decide contratar tus servicios. Como encargado del desarrol
 _Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local para propósitos de desarrollo y pruebas._
 
 *Crear Base de Datos con la estructura necesaria para el proyecto
+
 *Crear proyecto con Spring Initializr 
+
 [![springinit.png](https://i.postimg.cc/yYrD74Dx/springinit.png)](https://postimg.cc/F73rx6gX)
 
 ### Pre-requisitos 📋
