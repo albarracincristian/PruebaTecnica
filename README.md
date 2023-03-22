@@ -75,3 +75,18 @@ http://localhost:8080/employees/10
 ```
 Resultado ejemplo:
 [![consulta-empleado-id.png](https://i.postimg.cc/QMKpvL3G/consulta-empleado-id.png)](https://postimg.cc/Y4kGms0b)
+
+Solicitud Tipo POST para Grabar un empleado pasando los parametros necesarios en Body, Raw, Json
+
+```
+http://localhost:8080/employees/save
+```
+```
+    {
+        "gender": "Masculino",
+        "first_name": "Cristian",
+        "last_name": "Albarracin"
+    }
+```
+Resultado ejemplo:
+[![grabarempleado.png](https://i.postimg.cc/Qx6Y3rRH/grabarempleado.png)](https://postimg.cc/7f2n3jPk)
