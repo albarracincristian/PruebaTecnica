@@ -36,15 +36,21 @@ Ejecutar [Script](https://github.com/albarracincristian/PruebaTecnica/blob/main/
 
 ### Instalación 🔧
 
-_Una serie de ejemplos paso a paso que te dice lo que debes ejecutar para tener un entorno de desarrollo ejecutandose_
-
 *Clonar Repositorio y abrir el poyecto Maven con Apache NetBeans directorio "Back-End", al abrir esperar que se descarguen todos los complementos para el build
 
 [![Abrirmaven.png](https://i.postimg.cc/V6C6RD1R/Abrirmaven.png)](https://postimg.cc/gXGmcyxX)
 
+*Luego de abrir el proyecto asegurarnos que el Datasource contenga los siguientes datos de conexion con la base de datos:
+
+[![aplication.png](https://i.postimg.cc/cCdvLfyB/aplication.png)](https://postimg.cc/VrHf7rNJ)
+
 
 ```
-Da un ejemplo
+spring.jpa.hibernate.ddl-auto=update
+spring.datasource.url=jdbc:mysql://localhost:3307/beclever?serverTimezone=UTC
+spring.datasource.username=root
+spring.datasource.password=beclever
+spring.jpa.database-platform=org.hibernate.dialect.MySQLDialect
 ```
 
 _Y repite_
