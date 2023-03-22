@@ -5,7 +5,7 @@ Para esto la empresa decide contratar tus servicios. Como encargado del desarrol
 
 ### Pre-requisitos 📋
 
-_Que cosas necesitas para instalar el software y como instalarlas_
+_Que cosas necesitas para instalar el software_
 
 *IDE Apache Netbeans version 17
 
@@ -27,8 +27,13 @@ _Estas instrucciones te permitirán obtener una copia del proyecto en funcionami
 
 *Crear Base de Datos con los siguientes datos Hostname: localhost puerto: 3307 Contraseña: beclever
 
-Agregar un nuevo Schema con el nombre a gusto y setear como Default o ejecutar el Query "use [nombre Schema elegido]
-Ejecutar [Script](https://github.com/albarracincristian/PruebaTecnica/blob/main/Base%20de%20Datos-MySQL/Script_BD_Clever_Business.sql) del repositorio 
+Agregar un nuevo Schema con el nombre a gusto y setear como Default o ejecutar el Query "use [nombre Schema elegido].
+
+Ejecutar [Script](https://github.com/albarracincristian/PruebaTecnica/blob/main/Base%20de%20Datos-MySQL/Script_BD_Clever_Business.sql) del repositorio github Base de datos-MySQL.
+
+[![Create-DB.png](https://i.postimg.cc/2yvtcfL6/Create-DB.png)](https://postimg.cc/0KkZjFfR)
+
+
 
 *Crear proyecto con Spring Initializr 
 
