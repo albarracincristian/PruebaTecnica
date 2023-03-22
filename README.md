@@ -25,9 +25,10 @@ _Que cosas necesitas para instalar el software y como instalarlas_
 
 _Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local para propósitos de desarrollo y pruebas._
 
-*Crear Base de Datos con los siguientes datos Hostname: localhost puerto: 8080 Contraseña: beclever
+*Crear Base de Datos con los siguientes datos Hostname: localhost puerto: 3307 Contraseña: beclever
 
 Agregar un nuevo Schema con el nombre a gusto y setear como Default o ejecutar el Query "use [nombre Schema elegido]
+Ejecutar [Script](https://github.com/albarracincristian/PruebaTecnica/blob/main/Base%20de%20Datos-MySQL/Script_BD_Clever_Business.sql) del repositorio 
 
 *Crear proyecto con Spring Initializr 
 
