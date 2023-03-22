@@ -3,19 +3,29 @@
 _La empresa Clever Business cuenta con 3 sucursales distribuidas en diferentes países: Argentina, Brasil y España. En el último tiempo está teniendo problemas para el control del personal que ingresa y egresa día a día en sus instalaciones, por lo que decide contratar un sistema el cual le permita tener un control total del ingreso/egresos.
 Para esto la empresa decide contratar tus servicios. Como encargado del desarrollo tu misión es crear una capa de servicios (API REST) que puedan ser consumidos por las diferentes plataformas que cuenta Clever Business (Mobile-Web)._
 
+### Pre-requisitos 📋
+
+_Que cosas necesitas para instalar el software y como instalarlas_
+
+*IDE Apache Netbeans version 17
+*JDK version 17
+*MySQL Server 8.0.32
+*MySQL Workbennch 8.0.32
+*Connector/J version 8.0.32
+*Postman
+*Visual Studio Code
+
 ## Comenzando 🚀
 
 _Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local para propósitos de desarrollo y pruebas._
 
-*Crear Base de Datos con la estructura necesaria para el proyecto
+*Crear Base de Datos con los siguientes datos Hostname: localhost puerto: 8080 Contraseña: beclever
+
+Agregar un nuevo Schema con el nombre a gusto y setear como Default o ejecutar el Query "use [nombre Schema elegido]
 
 *Crear proyecto con Spring Initializr 
 
 [![springinit.png](https://i.postimg.cc/yYrD74Dx/springinit.png)](https://postimg.cc/F73rx6gX)
-
-### Pre-requisitos 📋
-
-_Que cosas necesitas para instalar el software y como instalarlas_
 
 ```
 Da un ejemplo
