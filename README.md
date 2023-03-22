@@ -130,3 +130,46 @@ http://localhost:8080/registrations/average?dateFrom=2023-01-01&dateTo=2023-12-3
 ```
 Resultado ejemplo:
 [![promregfecha.png](https://i.postimg.cc/JhqCZFsJ/promregfecha.png)](https://postimg.cc/nsCWt0Yc)
+
+Solicitud Tipo POST para Grabar un registro pasando los parametros necesarios en Body, Raw, Json
+
+```
+http://localhost:8080/registrations/register
+```
+```
+{
+    "employee": {
+        "gender": "Masculino",
+        "employee_Id": 11,
+        "first_name": "Cristian Bartolome",
+        "last_name": "Albarracin"
+    },
+    "date": "2023-03-21T03:00:00.000+00:00",
+    "registerType": "ingreso",
+    "businessLocation": "Argentina"
+}
+```
+Resultado ejemplo:
+[![grabarregistro.png](https://i.postimg.cc/cCYvxZJw/grabarregistro.png)](https://postimg.cc/V0ffgxnk)
+
+Solicitud Tipo PUT para modificar un registro pasando los parametros necesarios en Body, Raw, Json
+
+```
+http://localhost:8080/registrations/upDateRegistration
+```
+```
+{
+    "employee": {
+        "gender": "Masculino",
+        "employee_Id": 11,
+        "first_name": "Cristian B.",
+        "last_name": "Albarracin"
+    },
+    "date": "2023-03-21T03:00:00.000+00:00",
+    "registerType": "egreso",
+    "businessLocation": "Argentina",
+    "registration_Id": 31
+}
+```
+Resultado ejemplo:
+[![modificaregistro.png](https://i.postimg.cc/VNdMxxXB/modificaregistro.png)](https://postimg.cc/hJRfx3yf)
